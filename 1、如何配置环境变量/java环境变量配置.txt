@@ -1,0 +1,24 @@
+
+ 2.1安装java(1.6/1.7)
+ 2.2需要配置环境变量
+计算机单击右键>属性>高级系统设置>环境变量>在下面的系统变量中
+新建
+JAVA_HOME
+C:\Program Files\Java\jdk1.6.0_02(最好从自己的电脑中粘过来)
+新建
+CLASSPATH(java1.6之后就可以不用写了)
+.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;
+编辑
+Path
+;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+
+ 2.3打开Dos界面：按着windows键，按R，在运行中输入cmd回车
+	dos中命令:"cd..":返回上级目录
+          	  "cd <文件夹名>":进入该文件夹
+           	  "盘符:":转换到该盘下
+		  "dir":查看当前目录下所有文件
+
+
+
+
+

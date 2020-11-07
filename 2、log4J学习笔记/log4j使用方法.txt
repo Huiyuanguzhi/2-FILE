@@ -1,0 +1,27 @@
+
+1、准备log4j的jar包
+2、建立log4j.properties文件
+3、将以下信心粘贴进去
+log4j.rootLogger=debug, stdout,logfile
+
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.err
+log4j.appender.stdout.layout=org.apache.log4j.SimpleLayout
+
+
+log4j.appender.logfile=org.apache.log4j.FileAppender
+log4j.appender.logfile.File=mylog.txt
+log4j.appender.logfile.layout=org.apache.log4j.PatternLayout
+log4j.appender.logfile.layout.ConversionPattern=%d{yyyy-MM-dd HH\:mm\:ss} %l %F %p %m%n
+
+
+
+
+
+
+4、在要输出日志的类中，声明：Logger logger = Logger.getLogger(this.getClass());
+5、
+logger.debug("接收了信息：用户名=" + username + ",密码=" + pwd + ",开始将他们转换为整型");
+logger.warn("接收了信息：用户名=" + username + ",密码=" + pwd + ",开始将他们转换为整型");
+logger.info("接收了信息：用户名=" + username + ",密码=" + pwd + ",开始将他们转换为整型");
