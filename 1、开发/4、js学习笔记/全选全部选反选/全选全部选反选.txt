@@ -1,0 +1,51 @@
+function checkBooxDel(){
+		
+		 var shuzu=new Array();
+		//获取元素对象
+		var userids= document.getElementsByName("users");
+		//遍历元素对象取值
+		for(var i=0;i<userids.length;i++){
+		//判断是否选中
+		if(userids[i].checked){
+		//如果选中把值添加到数组中
+			shuzu.push(userids[i].value);
+			
+			
+		}
+		
+		} 
+		
+		
+		location.href="SelectServlet.do?method=pisha&&para="+shuzu;
+		
+	}
+	//全选的方法
+	function choseAll(){
+	
+	var users=document.getElementsByName("users");
+	for(var i=0;i<users.length;i++){
+	users[i].checked=true;
+	
+	}
+	
+	}
+	//全不选
+	function choseNull(){
+	var users=document.getElementsByName("users");
+	for(var i=0;i<users.length;i++){
+	users[i].checked=false;
+	
+	}
+	}
+	//反选
+	function choseSome(){
+	var users=document.getElementsByName("users");
+	for(var i=0;i<users.length;i++){
+	if(users[i].checked){
+	users[i].checked=false;
+	}else{
+	users[i].checked=true;
+	}
+	
+	}
+	}

@@ -1,0 +1,64 @@
+sed：流编辑器
+
+原文
+I am oldboy teacher!
+I like badminton ball ,billiard ball and chinese chess!
+our site is http://www.oldboyedu.com
+my qq num is 49000448.
+
+问题1：输出oldboy.txt第2-3行的内容
+
+问题2：过滤出含有oldboy字符串的行
+
+问题3：删除还有oldboy字符串的行
+
+问题4：将文件中的oldboy字符串全部替换为oldgirl
+
+问题5：将文件中的oldboy字符串全部替换为oldgril,同时将qq号码49000448改为31333741
+
+问题6：在oldboy.txt文件的第2行后追加文本
+
+问题7：在oldboy.txt文件的第2行插入文本
+
+问题8：在oldboy.txt文件的第2行插入两行文本
+
+
+
+
+
+
+-------------答案即将揭晓------------
+
+
+
+
+
+
+
+
+问题1：输出oldboy.txt第2-3行的内容
+答：sed -n '2,3p' oldboy.txt
+
+问题2：过滤出含有oldboy字符串的行
+答：sed -n '/oldboy/p' oldboy.txt
+
+问题3：删除还有oldboy字符串的行
+答：sed '/oldboy/d' oldboy.txt
+
+问题4：将文件中的oldboy字符串全部替换为oldgirl
+答：sed 's#oldboy#oldgirl#g' oldboy.txt
+
+问题5：将文件中的oldboy字符串全部替换为oldgril,同时将qq号码49000448改为31333741
+答：sed -e 's#oldboy#oldgirl#g' -e 's#49000448#31333741#g' oldboy.txt
+
+问题6：在oldboy.txt文件的第2行后追加文本
+答：sed -i '2a i want growup' oldboy.txt
+
+问题7：在oldboy.txt文件的第2行插入文本
+答：sed -i '2i i teach linux at 2i.' oldboy.txt
+
+问题8：在oldboy.txt文件的第2行插入两行文本
+答：sed -i '2i I teach Linux.\n You are my student.' oldboy
+
+
+

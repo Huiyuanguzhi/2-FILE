@@ -1,0 +1,13 @@
+	function a(){
+		
+			var doc_name=document.getElementById("doc_name");
+			
+			doc_name.value="";
+			
+			var doc_num=document.getElementById("doc_num");
+			doc_num.value="";
+			
+			var off_id=document.getElementById("off_id");
+			off_id.value=0;
+			
+		}
